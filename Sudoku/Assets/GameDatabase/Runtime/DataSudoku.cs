@@ -24,6 +24,49 @@ public class DataSudoku
         }
         return m_Grid;
     }
+
+    public Cell[,] CustomGridForTest() {
+        
+        int[,] myNumbersBitch = {
+            {0,1,0,0,0,0,0,0,0 },
+            {0,0,1,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 },
+            {0,0,0,0,0,0,0,0,0 }
+        };
+
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                m_Grid[i, j] = new Cell {
+                    number = myNumbersBitch[i, j] 
+                };
+            }
+        }
+
+        return m_Grid;
+    }
+
+
+    public void PrintGrid()
+    {
+        string ans = "";
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+
+                ans += m_Grid[i, j].number.ToString() + " ";
+            }
+            ans += "\n";
+        }
+        Debug.Log(ans);
+    }
 }
 
 
