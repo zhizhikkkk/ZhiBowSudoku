@@ -1,11 +1,13 @@
 
+using System.Collections.Generic;
+
 using UnityEngine;
 
 public class DataSudoku
 {
     public DataSudoku()
     {
-        m_Grid = new Cell[Row,Column];
+        m_Grid = new Cell[Row, Column];
     }
 
     public const int Row = 9;
@@ -19,11 +21,25 @@ public class DataSudoku
         {
             for (int y = 0; y < Column; y++)
             {
+
                 m_Grid[x, y].number = Random.Range(0, 10);
             }
         }
         return m_Grid;
     }
+
+    private List<int> GetVertical((int x, int y) p)
+    {
+        List<int> vertical = new List<int>();
+        for (int y = 0; y < Column; y++)
+        {
+
+        }
+        return vertical;
+    }
 }
+
+
+
 
 
