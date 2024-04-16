@@ -14,8 +14,8 @@ public class TestGrid : MonoBehaviour
         sudoku.Create();//Создание сетки
 
         sudoku.GetOriginGrid();//Массив, всей заполненной таблицы
-        sudoku.CheckCell((4, 4), new Cell());//сравнивание установленной цифры
-        sudoku.CheckFinish( new Cell[9,9]);//проверка всей таблицы. Для проверки конца игры
+        sudoku.CheckCell((4, 4), new Cell());//Сравнение установленной цифры
+        sudoku.CheckFinish( new Cell[9,9]);//Проверка всей таблицы. Для проверки конца игры
         Cell[,] grid = sudoku.GetModifiedGrid();// Получение сетки с нулями
         
         for (int x = 0; x < grid.GetLength(0); x++)
