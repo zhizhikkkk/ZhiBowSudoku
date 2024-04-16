@@ -10,10 +10,13 @@ public class TestGrid : MonoBehaviour
     void Start()
     {
         SudokuGenerator sudoku = new SudokuGenerator();
-        sudoku.complexity = Complexity.Easy;
-        sudoku.Create();
+        sudoku.complexity = Complexity.Easy;//Сложность игры
+        sudoku.Create();//Создание сетки
 
-        Cell[,] grid = sudoku.GetModifiedGrid();
+        sudoku.GetOriginGrid();//Массив, всей заполненной таблицы
+        sudoku.CheckCell((4, 4), new Cell());//сравнивание установленной цифры
+        sudoku.CheckFinish( new Cell[9,9]);//проверка всей таблицы. Для проверки конца игры
+        Cell[,] grid = sudoku.GetModifiedGrid();// Получение сетки с нулями
         
         for (int x = 0; x < grid.GetLength(0); x++)
         {
