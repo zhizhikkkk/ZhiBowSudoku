@@ -19,8 +19,7 @@ public class DataSudoku
         {
             for (int y = 0; y < Column; y++)
             {
-                m_Grid[x, y].number = Random.Range(8, 10);
-                Debug.Log(m_Grid[x, y].number);
+                m_Grid[x, y].number = Random.Range(0, 10);
             }
         }
         return m_Grid;

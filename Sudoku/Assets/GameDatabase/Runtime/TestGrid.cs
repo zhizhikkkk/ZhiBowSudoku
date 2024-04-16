@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TestGrid : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        Cell[,] grid = new DataSudoku().Create();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
