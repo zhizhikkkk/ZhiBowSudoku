@@ -16,8 +16,10 @@ public class TestGrid : MonoBehaviour
         sudoku.GetOriginGrid();//Массив, всей заполненной таблицы
         sudoku.CheckCell((4, 4), new Cell());//Сравнение установленной цифры
         sudoku.CheckFinish( new Cell[9,9]);//Проверка всей таблицы. Для проверки конца игры
-        Cell[,] grid = sudoku.GetModifiedGrid();// Получение сетки с нулями
-        
+        sudoku.GetModifiedGrid();// Получение сетки с нулями
+        Cell[,] grid = sudoku.GetOriginGrid();
+
+
         for (int x = 0; x < grid.GetLength(0); x++)
         {
             for (int y = 0; y < grid.GetLength(0); y++)
@@ -25,7 +27,6 @@ public class TestGrid : MonoBehaviour
                 TextMeshProUGUI textMesh = Instantiate(m_Prefab, new Vector2(x, y), Quaternion.identity, transform);
                 textMesh.text = grid[x, y].number.ToString();
             }
-
         }
     }
 
